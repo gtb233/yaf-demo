@@ -17,7 +17,11 @@ class IndexController extends Yaf_Controller_Abstract {
 		//1. fetch query
 		$get = $this->getRequest()->getQuery("get", "default value");
 
-		helpers\VarDumper::dump(Yaf_Application::app()->getConfig()->toArray());
+        $url = 'http://username:password@hostname/path?arg=value&test=123#anchor';
+        helpers\VarDumper::dump(parse_url($url));
+
+
+        helpers\VarDumper::dump(Yaf_Application::app()->getConfig()->toArray());
 
 		//2. fetch model
 		$model = new SampleModel();
