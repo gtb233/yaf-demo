@@ -1,4 +1,5 @@
 <?php
+namespace helpers;
 /**
  * var_dump 输出优化
  * User: gaotanbin

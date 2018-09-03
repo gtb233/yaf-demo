@@ -16,16 +16,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
         //把配置保存起来
         $arrConfig = Yaf_Application::app()->getConfig();
         Yaf_Registry::set('config', $arrConfig);
-
-        if (!function_exists('classAutoLoader')) {
-            function classAutoLoader($class)
-            {
-                $class = strtolower($class);
-                $classFile = APP_PATH . '/library/' . $class . '.php';
-                if (is_file($classFile) && !class_exists($class)) include $classFile;
-            }
-        }
-        spl_autoload_register('classAutoLoader');
     }
 
     public function _initPlugin(Yaf_Dispatcher $dispatcher)
