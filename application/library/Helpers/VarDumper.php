@@ -1,5 +1,5 @@
 <?php
-namespace helpers;
+namespace Helpers;
 /**
  * ```php
  * VarDumper::dump($var);

@@ -1,5 +1,5 @@
 <?php
-namespace helpers;
+namespace Helpers;
 /**
  * var_dump 输出优化
  * User: gaotanbin
@@ -21,7 +21,9 @@ class BaseVarDumper
      */
     public static function dump($var, $depth = 10, $highlight = false)
     {
+        echo '<pre>';
         echo static::dumpAsString($var, $depth, $highlight);
+        echo '</pre>';
     }
 
     /**
